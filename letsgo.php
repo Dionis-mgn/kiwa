@@ -1,13 +1,11 @@
 <?php
-
-define("TIMESTAMP_FILENAME", "/usr/html/letsgodata");
-define("TIMEOUT", 120);
+include_once 'defines.php';
 
 $oldTimestamp = file_get_contents(TIMESTAMP_FILENAME);
 
 $timestamp = time();
 
-if ($timestamp - $oldTimestamp < TIMEOUT)
+if ($timestamp - $oldTimestamp < LETSGO_TIMEOUT)
 {
 	http_response_code(500);
 	die("Busy");

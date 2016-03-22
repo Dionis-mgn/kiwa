@@ -45,7 +45,8 @@ module.exports = {
 		new CopyPlugin([
 			{ from: './index.html' },
 			{ from: './status.php' },
-			{ from: './letsgo.php' }
+			{ from: './letsgo.php' },
+			{ from: './defines.php' }
 		]
 		)
 	]
