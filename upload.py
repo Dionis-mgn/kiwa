@@ -8,7 +8,7 @@ IDENTITY_FILE = "/home/denis/.ssh/id_rsa_nopass"
 UPLOAD_ADDRESS = "root@192.168.1.101"
 UPLOAD_DIR = "/usr/html"
 
-FILE_EXTS = (".html", ".css", ".js", ".php")
+FILE_EXTS = (".html", ".css", ".js", ".php", ".png", ".jpg")
 
 
 def getTrackedFiles():
@@ -20,8 +20,12 @@ def getTrackedFiles():
 	return fileList
 
 files = getTrackedFiles()
+
+connectionString = "ssh -i " + IDENTITY_FILE + " " + UPLOAD_ADDRESS + " "
+os.system(connectionString + "'./out.sh 15 0'")
 for file in files:
 	fileName = file[0] + '/' + file[1]
-	command = "ssh -i " + IDENTITY_FILE + " " + UPLOAD_ADDRESS + " 'cat > " + UPLOAD_DIR + '/' + file[1] +"' < " + fileName
+	command = "'cat > " + UPLOAD_DIR + '/' + file[1] +"' < " + fileName
 	print command
-	os.system(command)
+	os.system(connectionString + command)
+os.system(connectionString + "'./out.sh 15 1'")
