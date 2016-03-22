@@ -7,6 +7,8 @@ define("LIGHT_DIR_FILE", LIGHT_DIR."/direction");
 define("LIGHT_VAL_FILE", LIGHT_DIR."/value");
 define("LIGHTON_VALUE", "0");
 
+define("TIMESTAMP_FILENAME", "/usr/html/letsgodata");
+
 if (!file_exists(LIGHT_DIR) || !is_dir(LIGHT_DIR)) {
 	shell_exec("echo ".LIGHT_PIN." > ".GPIO_DIR."/export");
 	shell_exec("echo 'in' > ".LIGHT_DIR_FILE);
@@ -14,10 +16,19 @@ if (!file_exists(LIGHT_DIR) || !is_dir(LIGHT_DIR)) {
 
 $light_value = shell_exec("cat ".LIGHT_VAL_FILE);
 
+$timestamp = file_get_contents(TIMESTAMP_FILENAME);
+if (!$timestamp)
+{
+	$timestamp = "null";
+}
+$currTime = time();
+
+$timestampString = '"letgoTimestamp":'.$timestamp.',"currentTimestamp":'.$currTime;
+
 if ($light_value[0] == LIGHTON_VALUE) {
-	echo '{"light":true}';
+	echo '{"light":true,'.$timestampString.'}';
 } else {
-	echo '{"light":false}';
+	echo '{"light":false'.$timestampString.'}';
 }
 
 ?>

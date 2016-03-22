@@ -44,7 +44,8 @@ module.exports = {
 	plugins: [
 		new CopyPlugin([
 			{ from: './index.html' },
-			{ from: './status.php' }
+			{ from: './status.php' },
+			{ from: './letsgo.php' }
 		]
 		)
 	]
