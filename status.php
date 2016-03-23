@@ -20,7 +20,7 @@ $timestampString = '"letsgoTimestamp":'.$timestamp.',"currentTimestamp":'.$currT
 if ($light_value[0] == LIGHTON_VALUE) {
 	echo '{"light":true,'.$timestampString.'}';
 } else {
-	echo '{"light":false'.$timestampString.'}';
+	echo '{"light":false,'.$timestampString.'}';
 }
 
 ?>
