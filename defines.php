@@ -1,4 +1,5 @@
 <?php
+error_reporting(0);
 
 define("LIGHT_PIN", 20);
 define("GPIO_DIR", "/sys/class/gpio");
