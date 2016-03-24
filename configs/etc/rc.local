@@ -1,0 +1,13 @@
+# Put your custom commands here that should be executed once
+# the system init finished. By default this file does nothing.
+
+ash /root/out.sh 15 1
+ash /root/out.sh 6 1
+ash /root/out.sh 8 1
+ash /root/out.sh 26 1
+ash /root/out.sh 17 1
+ash /root/out.sh 13 1
+ash /root/out.sh 14 1
+ash /root/out.sh 7 1
+
+exit 0
