@@ -5,7 +5,7 @@ $oldTimestamp = file_get_contents(TIMESTAMP_FILENAME);
 
 $timestamp = time();
 
-if ($timestamp - $oldTimestamp < LETSGO_TIMEOUT)
+if (getCurrentState() || ($timestamp - $oldTimestamp < LETSGO_TIMEOUT))
 {
 	http_response_code(500);
 	die("Busy");
