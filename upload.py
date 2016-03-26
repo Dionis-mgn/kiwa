@@ -4,7 +4,8 @@ PATHNAME = os.path.dirname(os.path.abspath(__file__))
 TEMP_DIR = PATHNAME + "/uploadtemp"
 TEMP_FILE = PATHNAME + "/temp.zip"
 SOURCE_DIR = PATHNAME + "/dist"
-IDENTITY_FILE = "/home/denis/.ssh/id_rsa_nopass"
+IDENTITY_FILE = "-i /home/denis/.ssh/id_rsa_nopass"
+# IDENTITY_FILE = ""
 UPLOAD_ADDRESS = "root@192.168.1.101"
 UPLOAD_DIR = "/usr/html"
 
@@ -21,7 +22,7 @@ def getTrackedFiles():
 
 files = getTrackedFiles()
 
-connectionString = "ssh -i " + IDENTITY_FILE + " " + UPLOAD_ADDRESS + " "
+connectionString = "ssh " + IDENTITY_FILE + " " + UPLOAD_ADDRESS + " "
 os.system(connectionString + "'./out.sh 15 0'")
 for file in files:
 	fileName = file[0] + '/' + file[1]
