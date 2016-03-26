@@ -2,6 +2,10 @@
   "name": "kiwa",
   "version": "1.0.0",
   "description": "Kicker Watcher",
+  "repository" : {
+    "type" : "git",
+    "url" : "https://github.com/Dionis-mgn/kiwa.git"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
