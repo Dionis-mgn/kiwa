@@ -99,3 +99,19 @@
 	background-color: hsla(360, 100%, 100%, 1.0);
 	color: hsla(360, 100%, 0%, 1.0);
 }
+
+.trakerLink {
+	position: absolute;
+	right: 0;
+	bottom: 0;
+	padding-left: 10px;
+	padding-right: 10px;
+	padding-top: 4px;
+	padding-bottom: 4px;
+	background-color: hsla(360, 100%, 100%, 0.6);
+	color: hsla(360, 100%, 0%, 1.0);
+}
+
+.trakerLink a {
+	color: hsla(360, 100%, 0%, 1.0);
+}

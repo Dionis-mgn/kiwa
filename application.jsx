@@ -162,6 +162,9 @@ class Application extends React.Component {
 				<div className="datapanel">
 					{content}
 				</div>
+				<div className="trakerLink">
+					<a href="https://github.com/Dionis-mgn/kiwa/issues">Рассказать об ошибоньке</a>
+				</div>
 			</div>
 		);
 	}
