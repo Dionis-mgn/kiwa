@@ -2,9 +2,9 @@
   "name": "kiwa",
   "version": "1.0.0",
   "description": "Kicker Watcher",
-  "repository" : {
-    "type" : "git",
-    "url" : "https://github.com/Dionis-mgn/kiwa.git"
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Dionis-mgn/kiwa.git"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -21,10 +21,7 @@
     "file-loader": "^0.8.5",
     "jsx-loader": "^0.13.2",
     "postcss": "^5.0.19",
-    "postcss-css-variables": "^0.5.1",
     "postcss-loader": "^0.8.1",
-    "postcss-mixins": "^4.0.1",
-    "postcss-nested": "^1.0.0",
     "raw-loader": "^0.5.1",
     "react": "^0.14.7",
     "react-dom": "^0.14.7",
