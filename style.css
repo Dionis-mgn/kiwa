@@ -91,11 +91,11 @@
 	color: hsla(360, 100%, 100%, 1.0);
 }
 
-.free .mybutton {
+.free .mybutton, .awaiting .mybutton {
 	color: hsla(360, 100%, 100%, 1.0);
 }
 
-.free .mybutton:hover {
+.free .mybutton:hover, .awaiting .mybutton:hover {
 	background-color: hsla(360, 100%, 100%, 1.0);
 	color: hsla(360, 100%, 0%, 1.0);
 }
