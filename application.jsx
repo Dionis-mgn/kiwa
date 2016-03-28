@@ -2,6 +2,8 @@ import React from 'react';
 
 import Timer from 'timer.jsx';
 
+import 'babel-polyfill';
+
 class Application extends React.Component {
 	constructor(props) {
 		super(props);
